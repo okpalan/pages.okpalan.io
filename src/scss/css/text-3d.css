@@ -1,0 +1,18 @@
+.text-3d {   
+    --text-color:rgb(90, 171, 32);
+    font-size: 150px;
+    color: transparent;
+    background-clip:text;
+    -webkit-background-clip: text;
+    text-shadow: 1px 1px 1px var(--text-color),
+                 1px 2px 1px var(--text-color),
+                 1px 3px 1px var(--text-color),
+                 1px 4px 1px var(--text-color),
+                 1px 5px 1px var(--text-color),
+                 1px 6px 1px var(--text-color),
+                 1px 7px 1px var(--text-color),
+                 1px 8px 1px var(--text-color),
+                 1px 9px 1px var(--text-color),
+                 1px 10px 1px var(--text-color),
+                 1px 20px 40px var(--text-color);
+}

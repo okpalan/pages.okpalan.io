@@ -1,0 +1,12 @@
+.rounded {
+    border-radius: 100%;
+}
+
+.clearfix:before:after {
+    content: '';
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}

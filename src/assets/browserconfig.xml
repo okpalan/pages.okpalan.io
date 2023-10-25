@@ -1,0 +1,12 @@
+<browserconfig>
+<msapplication>
+<tile>
+<square70x70logo src="./assets/browserconfig/mstile70.png"/>
+<square150x150logo src="./assets/browserconfig/mstile150.png"/>
+<wide310x150logo src="./assets/browserconfig/mstile150.png"/>
+<square310x310logo src="./assets/browserconfig/mstile310.png"/>
+<TileColor>#FE0D10</TileColor>
+<TileImage src="/mstile150.png"/>
+</tile>
+</msapplication>
+</browserconfig>
