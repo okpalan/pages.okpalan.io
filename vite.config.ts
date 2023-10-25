@@ -2,6 +2,5 @@
 import { defineConfig } from 'vite';
 
 export default defineConfig({
-  base: '/',
-  build: {},
+  base: '/pages.okpalan.io'
 });
