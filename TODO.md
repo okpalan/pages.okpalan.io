@@ -1,1 +1,4 @@
-git subtree push --prefix dist origin master
+
+```sh
+$ git subtree push --prefix dist origin master
+```
