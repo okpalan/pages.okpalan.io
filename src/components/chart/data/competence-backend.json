@@ -1,18 +1,22 @@
 [
     {
         "name": "Python",
-        "competence": 6
+        "competence": 6,
+        "label": "Backend"
     },
     {
         "name": "Node.js",
-        "competence": 8
+        "competence": 8,
+        "label": "Backend"
     },
     {
         "name": "C",
-        "competence": 8
+        "competence": 8,
+        "label": "Backend"
     },
     {
         "name": "Lua",
-        "competence": 5
+        "competence": 6,
+        "label": "Backend"
     }
 ]
