@@ -1,5 +1,5 @@
 import "./scss/styles.scss";
-import "./components/chart/competence-chart.js";
+import "./components/chart/competence.js";
 import Typed from "typed.js";
 
 
