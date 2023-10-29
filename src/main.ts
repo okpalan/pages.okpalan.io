@@ -1,5 +1,6 @@
 import "./scss/styles.scss";
 import "./components/chart/competence.js";
+import "./components/gallery/gallery.js"
 import Typed from "typed.js";
 
 
