@@ -1,10 +1,6 @@
 'use strict';
-
-// JSON Headers for Request
-const _headers = new Headers({
-    'Content-Type': 'application/json',
-    'Accept': 'application/json'
-});
+import d3 from 'd3';
+import competence from './data/competence.json';
 
 const settings = {
     width: 800,
@@ -20,14 +16,8 @@ const options = {
     radius: 250,
     margin: 10,
     padding: 5,
-};
 
-const dataUrl = `http://${window.location.host}/chart/data/competence.json`;
-const currentId = options.elId.FRONTEND;
-
-// Fetch the data from the given URL
-let promisedData = [];
-
+}
 const svg = d3.select(settings.elId)
     .append('svg')
     .attr('width', settings.width)
@@ -194,7 +184,7 @@ async function drawChart() {
         console.error(error);
     }
 
-   
+
 }
 
 // Call the function to
