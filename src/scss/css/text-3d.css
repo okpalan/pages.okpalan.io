@@ -1,18 +1,29 @@
-.text-3d {   
-    --text-color:rgb(90, 171, 32);
-    font-size: 150px;
+.text-3d {
+    --jordy-blue: #9ac4f8ff;
+    --byzantium: #7e3068ff;
+    --bittersweet: #ed6a5aff;
+    --bice-blue: #006ba6ff;
+    --ivory: #ffffeaff;
+    --aquamarine: #21EEBFff;
+    --mint: #08C182ff;
+    --moonstone: #20B2C2ff;
+    --turquoise: #20E5BFff;
+    --mint-2: #02AF7Fff;
+    
+    font-size: 80px;
     color: transparent;
-    background-clip:text;
+    background-clip: text;
     -webkit-background-clip: text;
-    text-shadow: 1px 1px 1px var(--text-color),
-                 1px 2px 1px var(--text-color),
-                 1px 3px 1px var(--text-color),
-                 1px 4px 1px var(--text-color),
-                 1px 5px 1px var(--text-color),
-                 1px 6px 1px var(--text-color),
-                 1px 7px 1px var(--text-color),
-                 1px 8px 1px var(--text-color),
-                 1px 9px 1px var(--text-color),
-                 1px 10px 1px var(--text-color),
-                 1px 20px 40px var(--text-color);
+    text-shadow: 1px 1px 1px var(--jordy-blue),
+        1px 2px 1px var(--byzantium),
+        1px 3px 1px var(--bittersweet),
+        1px 4px 1px var(--bice-blue),
+        1px 5px 1px var(--ivory),
+        1px 6px 1px var(--aquamarine),
+        1px 7px 1px var(--mint),
+        1px 8px 1px var(--moonstone),
+        1px 9px 1px var(--turquoise),
+        1px 10px 1px var(--mint-2),
+        1px 20px 40px var(--jordy-blue),
+        1px 40px 20px var(--turquoise);
 }

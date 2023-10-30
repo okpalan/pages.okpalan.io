@@ -11,9 +11,9 @@ const settings = {
 const options = {
     radius: 150,
     margin: 10,
-    padding: 5,
+    padding: 5
+};
 
-}
 const svg = d3.select(settings.elId)
     .append('svg')
     .attr('width', settings.width)
@@ -95,7 +95,8 @@ arcs.selectAll('path')
 
 
 // Exit selection
-arcs.exit()
+arcs
+    .exit()
     .remove();
 
 // Enter selection
@@ -105,8 +106,7 @@ const newArcs = arcs
     .attr('class', 'arc');
 
 // Merge existing and new arcs,
-// then apply transitions to each 
-// individually
+// then apply transitions to each individually
 newArcs
     .merge(arcs)
     .transition()

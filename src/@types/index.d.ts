@@ -1,3 +1,5 @@
-declare module "typed.js" {
-    export = { };
+declare module "*.js" {
+    const value: any;
+    export = value;
+    export default value;
 }

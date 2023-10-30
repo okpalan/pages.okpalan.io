@@ -1,44 +1,18 @@
 :root {
-  --apple-green: #4e7708;
   --typo-font-size: 45px;
+  --line-height: 45px;
   margin: 0;
   padding: 0;
 }
 
 .drop-caps {
-  --line-height: 45px;
-  display: inline-block;
   font-family: Century;
-  width: inherit;
   font-size: var(--typo-font-size);
-  height: var(--line-height);
 }
 
 .drop-caps::first-letter {
-  left: 0;
-  border: 2.5px dashed;
-  border-top: none;
-  border-bottom: none;
+  float: left; /* Use float instead of left */
   font-size: 2.5em;
+  height: var(--line-height);
   line-height: var(--line-height);
-  z-index: 2;
-}
-
-
-.typo-container {
-  position: fixed;
-  right: 0;
-  line-height:0.45px;
-}
-
-.typo-content:first-child {
-  color: var(--apple-green);
-  display: inline;
-  font-size: 25px;
-}
-
-.typo-content:last-child {
-  color: red;
-  display: inline;
-  font-size: 25px;
 }

@@ -3,9 +3,7 @@
     --mouse-y:.5;
     background: radial-gradient(
       circle at calc(100% * var(--mouse-x)) calc(100% * var(--mouse-y)),
-      rgba(255, 255, 255, 0.25),
-      deepskyblue 50%,
-      #36454f
+     
     );
   }
   
