@@ -1,6 +1,8 @@
 import "./scss/styles.scss";
 import "./components/chart/index.js";
 import "./components/hemispheres/index.js";
+import "./components/torch/index.js";
+
 
 import Typed from "typed.js";
 

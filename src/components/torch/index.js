@@ -1,5 +1,5 @@
-
 import './torch.css';
+
 var root = document.documentElement;
 
 const isTouchDevice = () => {
@@ -8,15 +8,12 @@ const isTouchDevice = () => {
         (navigator.msMaxTouchPoints > 0))
 }
 
-
 document.addEventListener("mousemove", function (event) {
     var x = event.clientX / innerWidth;
     var y = event.clientY / innerHeight;
-
     root.style.setProperty("--mouse-x", x)
     root.style.setProperty("--mouse-y", y);
-})
-
+});
 
 document.addEventListener("touchmove", function (event) {
     if (isTouchDevice()) {
@@ -26,4 +23,3 @@ document.addEventListener("touchmove", function (event) {
         root.style.setProperty("--mouse-y", y);
     }
 })
-

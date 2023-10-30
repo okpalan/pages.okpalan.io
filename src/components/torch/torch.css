@@ -1,9 +1,14 @@
 .torch {
-    --mouse-x:.5;
-    --mouse-y:.5;
-    background: radial-gradient(
-      circle at calc(100% * var(--mouse-x)) calc(100% * var(--mouse-y)),
-     
-    );
-  }
+  --jordy-blue: #9ac4f8ff;
+  --byzantium: #7e3068ff;
+  --bittersweet: #ed6a5aff;
+  --bice-blue: #006ba6ff;
+  --ivory: #ffffeaff;
+
+  --mouse-x: 1;
+  --mouse-y: 1;
   
+  background: radial-gradient(circle at calc(100% * var(--mouse-x)) calc(100% * var(--mouse-y))),
+      var(--byzantium),
+      var(--ivory)
+    }
