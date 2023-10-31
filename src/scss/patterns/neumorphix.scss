@@ -1,0 +1,17 @@
+$neu-shadow-light: 5px;
+$neu-shadow-dark: -5px;
+$neu-blur: 10px;
+
+// Mixins
+@mixin neu($light-source: top left, $light: #ffff, $dark: #0000) {
+    $h1: if(index($light-source, left), $neu-shadow-light, $neu-shadow-dark);
+    $h2: if(index($light-source, left), $neu-shadow-dark, $neu-shadow-light);
+    $v1: if(index($light-source, top), $neu-shadow-light, $neu-shadow-dark);
+    $v2: if(index($light-source, top), $neu-shadow-dark, $neu-shadow-light);
+    box-shadow: #{$h1} #{$v1} $neu-blur $dark,
+    #{$h2} #{$v2} $neu-blur $light;
+}
+
+@mixin neu-bg($angle, $bg-start, $bg-end) {
+    background: linear-gradient(#{$angle}, #{$bg-start}, #{$bg-end});
+}

@@ -10,7 +10,7 @@ import { loadScripts } from '@/utils/index.js';
 const scriptLocations = ['./src/lib/css3d.js'];
 
 loadScripts(scriptLocations, (() => { console.log("Script Loaded") }));
-new (Typed as any)('#about-me', {
+new (Typed as any)('#about-me ', {
     strings: ['UI/UX Designer', 'Content Creator', 'Software Engineer', 'Artist'],
     typeSpeed: 80,
     showCursor: false,
