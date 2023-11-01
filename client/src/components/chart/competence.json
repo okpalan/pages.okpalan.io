@@ -1,0 +1,37 @@
+[
+    {
+        "name": "HTML",
+        "competence": 8,
+        "type": "frontend"
+    },
+    {
+        "name": "CSS3",
+        "competence": 9,
+        "type": "backend"
+    },
+    {
+        "name": "JavaScript",
+        "competence": 9,
+        "type": "frontend"
+    },
+    {
+        "name": "Python",
+        "competence": 6,
+        "type": "frontend"
+    },
+    {
+        "name": "Node.js",
+        "competence": 8,
+        "type": "frontend"
+    },
+    {
+        "name": "C",
+        "competence": 8,
+        "type": "backend"
+    },
+    {
+        "name": "Lua",
+        "competence": 5,
+        "type": "backend"
+    }
+]

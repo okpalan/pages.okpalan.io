@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        canvas {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+
+<body>
+    <canvas id="colorCanvas" width="400" height="400"></canvas>
+
+    <script defer>
+        const canvas = document.getElementById('colorCanvas');
+        const ctx = canvas.getContext('2d');
+
+        function hslToHsv(h, s, l) {
+            h = h / 360; // Normalize hue to [0, 1]
+
+            // Calculate Value (V)
+            const v = (2 * l + s * (1 - Math.abs(2 * l - 1)) / 2);
+
+            // Calculate Saturation (S)
+            let newS;
+            if (v === 0) {
+                newS = 0;
+            } else {
+                newS = (2 * (v - l) / v);
+            }
+
+            return [h * 360, newS, v];
+        }
+
+        const startHue = 0;
+        const endHue = 360;
+        const numSteps = canvas.width; // Number of steps matches the canvas width
+        const s = 0.8; // Saturation
+        const l = 0.5; // Lightness
+
+        canvas.addEventListener('mousemove', (e) => {
+            const x = e.offsetX;
+            const h = startHue + (endHue - startHue) * x / canvas.width;
+            const [hsvH, hsvS, hsvV] = hslToHsv(h, s, l);
+
+            const gradient = ctx.createLinearGradient(0, 0, canvas.width, 0);
+            gradient.addColorStop(0, `hsl(${hsvH}, ${hsvS * 100}%, ${hsvV * 100}%)`);
+            gradient.addColorStop(1, `hsl(${hsvH}, ${hsvS * 100}%, ${hsvV * 100}%)`);
+
+            ctx.fillStyle = gradient;
+            ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+            // Optional: Display HSV values on the page
+            document.getElementById('hsvValues').textContent = `H: ${hsvH.toFixed(2)}, S: ${hsvS.toFixed(2)}, V: ${hsvV.toFixed(2)}`;
+        });
+
+        // Optional: Create a div to display HSV values
+        const hsvValuesDiv = document.createElement('div');
+        hsvValuesDiv.id = 'hsvValues';
+        document.body.appendChild(hsvValuesDiv);
+    </script>
+</body>
+
+</html>
