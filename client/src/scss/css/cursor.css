@@ -1,0 +1,13 @@
+:root {
+  --custom-cursor: url('/static/svg/cursor.svg');
+  --mouse-x: 0;
+  --mouse-y: 0;
+}
+
+html,
+#app {
+  position: relative;
+  width: 40px;
+  height: 40px;
+  cursor: url('/static/svg/cursor.svg'), auto;
+}

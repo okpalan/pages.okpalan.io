@@ -3,4 +3,5 @@
 @import "./compactability.css";
 @import "./typography.css";
 @import "./misc.css";
-
+@import './cursor.css';
+@import "./ghost.css";

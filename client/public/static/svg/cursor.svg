@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 40 40">
+  <!-- Cursor outer circle -->
+  <circle cx="20" cy="20" r="15" fill="#FF5733" opacity="0.7" />
+  <!-- Cursor inner circle -->
+  <circle cx="20" cy="20" r="10" fill="#FFA833" /> <!-- Cursor arrow -->
+  <path d="M20 0 L22 6 L24 0 Z" fill="#FF5733" />
+  <path d="M20 40 L22 34 L24 40 Z" fill="#e46549" />
+  <path d="M0 20 L6 22 L0 24 Z" fill="#FF5733" />
+  <path d="M40 20 L34 22 L40 24 Z" fill="#FF5733" />
+</svg>

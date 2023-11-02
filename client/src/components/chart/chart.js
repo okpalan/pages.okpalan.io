@@ -5,228 +5,148 @@ import competence from './competence.json';
 const settings = {
     width: 600,
     height: 400,
-    elId: '#competence-chart',
 };
 
 const options = {
     radius: 150,
     margin: 10,
     padding: 5,
+    elId: '#competence-chart',
+
 };
 
-const svg = d3.select(settings.elId)
+const svg = d3.select(options.elId)
     .append('svg')
     .attr('width', settings.width)
-    .attr('height', settings.height);
-svg.attr('role', 'region')
+    .attr('height', settings.height)
+    .attr('role', 'region')
     .attr('aria-label', 'Competence Chart')
     .attr('tabindex', '0');
-// Define the arc generator
-const arc = d3.arc()
-    .innerRadius(50)
-    .outerRadius(options.radius)
-    .padAngle(0.02);
 
-// Recalculate the pie layout with the updated data
-const pie = d3.pie()
-    .value(d => d.competence);
+const title = svg.append("text")
+    .attr("class", "title")
+    .attr("x", settings.width / 2).attr("y", settings.height - options.margin)
+    .attr("text-anchor", "middle")
+    .attr("font-size", "2em").text("Competence Chart");
 
-// Color scale for arc fill
-const colorScale = d3.scaleOrdinal()
-    .range(d3.schemeCategory10);
+// Added aria-labelledby pointing to the id of the title.
+svg.attr('aria-labelledby', 'chartTitle');
 
-// Title
-svg.append('text')
-    .text('Competence Chart')
-    .attr('id', 'title')
-    .attr('text-anchor', 'middle')
-    .attr('font-size', '1em')
-    .attr('x', settings.width / 2)
-    .attr('y', settings.height - options.margin + options.padding);
+const arc = d3.arc().innerRadius(50).outerRadius(options.radius)
+    .padAngle(0.04);
+const pie = d3.pie().value(d => d.competence);
 
-const g = svg.append('g')
-    .attr('transform', `translate(${settings.width / 2},${settings.height / 2})`)
-    .attr('id', 'arcs');
+// Adjust the color scale to ensure accessibility
+const colorScale = d3.scaleOrdinal().range(d3.schemePaired);
 
+const g = svg.append('g').attr('transform', `translate(${settings.width / 2},${settings.height / 2})`).attr('role', 'list');
 const labelGroup = svg.append('g')
     .attr('transform', `translate(${settings.width / 2},${settings.height / 2})`)
-    .attr('id', 'labels');
+    .attr('id', 'labels')
 
-// Update the arcs with transitions
-const arcs = g.selectAll('.arc')
-    .data(pie(Object.values(competence)));
-
-arcs.enter()
-    .append('path')
-    .attr('class', 'arc')
-    .attr('fill', (_, i) => colorScale(i))
-    .merge(arcs)
-    .transition()
-    .duration(750)
-    .attrTween('d', function (d) {
-        const interpolate = d3.interpolate({ startAngle: 0, endAngle: 0 }, d);
-        return function (t) {
-            return arc(interpolate(t));
-        };
-    });
-arcs.enter()
-    .append('path')
-    .attr('class', 'arc')
-    .attr('fill', (_, i) => colorScale(i))
-    .attr('role', 'img')  // role for each slice
-    .attr('aria-label', d => `Competence name: ${d.data.name}, Value: ${d.data.competence}`) // dynami
-// Focus and Blur interactions
-svg.selectAll('path')
-    .on('focus', function (event, d) {
-        const newArc = d3.arc()
-            .innerRadius(100).
-            outerRadius(options.radius + 100);
-        return d3.select(this)
-            .attr('d', newArc)
-            .transition()
-            .style('fill', 'orange')
-            .attr("role", "img") // Role attribute for the SVG arc
-            .attr("aria-label", `Competence name: ${d.data.name}, Value: ${d.data.competence}`); // Label attribute to describe the SVG arc's function
-    })
-    .on('blur', function (event, d) {
-        log
-        d3.select(this)
-            .attr('d', arc)
-            .transition()
-            .style('fill', (_, i) => colorScale(i));
-    });
-
-// Mouseover and Mouseout interactions
-svg.selectAll('path')
-    .on('mouseover', function (event, d) {
-        d3.select(this)
-            .transition()
-            .duration(185)
-            .style('opacity', 0.7);
-    })
-    .on('mouseout', function (event, d) {
-        d3.select(this)
-            .transition()
-            .duration(185)
-            .style('opacity', 1.0);
-    });
-
-// Focus button
-// const button = d3.select(settings.elId)
-//     .append('button')
-//     .text('Focu')
-//     .attr('id', 'custom-button')
-//     .attr('class', 'custom-button');
-
-// Title
-svg.append('text')
-    .text('Competence Chart')
-    .attr('id', 'title')
-    .attr('text-anchor', 'middle')
-    .attr('font-size', '1em')
-    .attr('x', settings.width / 2)
-    .attr('y', settings.height - options.margin + options.padding);
-
-// Function that handles what will occur when the mouse is moving over a slice
-function handleMouseOver(event, d) {
-    const selectedArc = d3.select(event.currentTarget);
-    selectedArc.attr('fill', 'orange');
-    selectedArc.attr('aria-label', `Competence name: ${d.data.name}, Value: ${d.data.competence}, Mouse Overed`);
-}
-
-// Function that handles what will occur when the mouse moves out of a slice
-function handleMouseOut(event, d) {
-    const selectedArc = d3.select(event.currentTarget);
-    selectedArc.attr('fill', (_, i) => colorScale(i));
-    selectedArc.attr('aria-label', `Competence name: ${d.data.name}, Value: ${d.data.competence}`);
-}
-
-svg.selectAll('path')
-    .on('focus', handleMouseOver)
-    .on('blur', handleMouseOut)
-    .on('mousemove', handleMouseMove);
-
-
-
-// Function that handles what will occur when the mouse is moving inside a slice
-function handleMouseMove(event, d) {
-    const selectedArc = d3.select(event.currentTarget);
-    selectedArc.attr('aria-label', `Competence name: ${d.data.name}, Value: ${d.data.competence}, Mouse In motion`);
-}
-
-const newArcs = arcs
-    .enter()
-    .append('path')
-    .attr('class', 'arc')
-    .attr('aria-hidden', 'true');
-
-
-// Update the labels with transitions
 const labels = labelGroup
     .selectAll('text')
     .data(pie(Object.values(competence)))
     .enter()
     .append('text')
     .text(d => d.data.name)
-    .transition()
-    .duration(750)
     .attr('transform', function (d) {
-        const [x, y] = arc.centroid(d);
-        const labelX = x;
-        const labelY = y;
-        return `translate(${labelX},${labelY})`;
-    })
-    .attr('dy', '0.45em') // Adjust the vertical position
-    .attr('text-anchor', 'middle')
-    .attr('fill', 'blue');
-
-
-
-// Exit selection
-arcs
-    .exit()
-    .remove();
-
-
-
-// Merge existing and new arcs,
-// then apply transitions to each individually
-newArcs
-    .merge(arcs)
-    .transition()
-    .duration(750)
-    .attr('fill', (_, i) => colorScale(i)) // Use the color scale
-    .attrTween('d', function (d) {
-        const interpolate = d3.interpolate({ startAngle: 0, endAngle: 0 }, d)
-        this._current = interpolate(0)
-        return function (t) {
-            return arc(interpolate(t));
-        };
-    });
-
-
-const label = labelGroup
-    .selectAll('text')
-    .data(pie(Object.values(competence)))
-
-
-label
-    .exit()
-    .remove();
-labels
-    .text(d => d.data.name)
-    .merge(labels)
-    .attrTween('transform', function (d) {
-        const interpolate = d3.interpolate({ startAngle: 0, endAngle: 0 }, d);
-        this._current = interpolate(0);
-        return function (t) {
-            const [x, y] = arc.centroid(interpolate(t));
-            return `translate(${x},${y})`;
-        };
+        var pos = arc.centroid(d);
+        return `translate(${pos})`;
     })
     .attr('dy', '.35em')
     .attr('text-anchor', 'middle')
-    .attr('fill', (d, i) => colorScale(competence.length - (i - 1)));
+    .attr('font-size', '1.4em')
+    .attr('stroke', (d, i) => d3.schemeDark2[i]);
 
+const arcs = g.selectAll('.arc')
+    .data(pie(Object.values(competence)))
+    .enter()
+    .append('path')
+    .attr('class', 'arc')
+    .attr('d', arc)
+    .attr('fill', (_, i) => colorScale(i))
+    .attr('role', 'listitem')
+    .attr('tabindex', '0');
+// Initialize each arc as "empty"
+arcs.attr('d', function (d) {
+    var i = d3.interpolate(d.startAngle, d.endAngle);
+    return function (t) {
+        d.endAngle = i(0);
+        return arc(d);
+    }
+})
+.transition() // start a transition
+.duration(1500) // for two seconds
+.attrTween('d', function (d) {
+    // interpolate the end angle from 0 to its final value
+    var i = d3.interpolate(d.startAngle, d.endAngle);
+    return function(t) {
+        d.endAngle = i(t);
+        return arc(d);
+    };
+});
 
+// Create a div element for the tooltip
+const tooltip = d3.select(options.elId) // Append tooltip to the body
+    .append('div')
+    .style('opacity', 0)
+    .attr('class', 'tooltip')
+    .style('background', '#f9f9f9')
+    .style('border', 'solid')
+    .style('border-width', '1px')
+    .style('border-radius', '5px')
+    .style('padding', '15px')
+    .style('position', 'absolute') // Position the tooltip absolutely
 
+function handleTooltip(event, d) {
+    const total = d3.sum(pie(Object.values(competence)).map((d) => d.data.competence));
+    const percentage = ((d.data.competence / total) * 100).toFixed(2);
+
+    tooltip
+        .style('opacity', 1)
+        .html(`<strong>
+            Programming Language:${d.data.name} <br>
+            My Competence: ${percentage}%<br>
+            Data Value: ${d.data.competence}<br>
+            Description: <br>
+             ${d.data.description}<br>
+            
+        </strong>`)
+        .style('left', (event.pageX + 10) + 'px') // Adjust the position from the mouse
+        .style('top', (event.pageY - 28) + 'px')
+        .style('width', '300px')
+}
+// Creating a larger arc when hovered
+const arcHovered = d3.arc()
+    .innerRadius(50)
+    .outerRadius(options.radius * 1.1) // Assuming a 10% increment when hovered
+    .padAngle(0.04);
+
+labels.on('mouseover', function (event, d) {
+    // Using a larger mean radius for the centroid when an arc is hovered
+    const posHover = arcHovered.centroid(d);
+    // Move the label
+    d3.select(this).transition().attr('transform', `translate(${posHover})`);
+    handleTooltip(event, d)
+})
+    .on('mouseout', function (event, d) {
+        // Moving the label back to its original position when mouse is not over the arc
+        const pos = arc.centroid(d);
+        d3.select(this).transition().attr('transform', `translate(${pos})`);
+        hideTooltip();
+    });
+
+// Then attach these handlers
+arcs.on('mouseover', function (event, d) {
+    handleTooltip(event, d);
+    d3.select(this).transition().duration(300).attr('transform', 'scale(1.1)');
+})
+    .on('mouseout', function () {
+        hideTooltip();
+        d3.select(this).transition().duration(300).attr('transform', 'scale(1)');
+    });
+
+function hideTooltip() {
+    tooltip.transition().duration(500).style('opacity', 0);
+}

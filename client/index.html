@@ -1,16 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Nnamdi Okpala Site</title>
-  <script type="module" src="./src/main.ts" defer></script>
 </head>
+
 <body>
   <div id="app" role="application" class="torch">
     <!-- Header Section -->
     <header>
       <h1>Welcome to Nnamdi Okpala's Site</h1>
+      <nav role="navigation" aria-label="Main">
+        <ul>
+          <li><a href="#home" accesskey="1">Home</a></li>
+          <li><a href="#about" accesskey="2">About</a></li>
+          <li><a href="#contact" accesskey="3">Contact</a></li>
+          <li><a href="#blog" accesskey="4">Blog</a></li>
+        </ul>
+      </nav>
     </header>
     <!-- Main Content Section -->
     <main>
@@ -19,12 +28,32 @@
         <p class="text-3d">Nnamdi</p>
         <div id="competence-chart"></div>
       </section>
+      <section id="game-section" class="parallax">
+
     </main>
     <!-- Footer Section -->
     <footer>
       <p>&copy; 2023 Nnamdi Okpala</p>
     </footer>
   </div>
+  <div class="glitch-wrapper">
+    <div class="ghost glitch-1">
+      <div class="eyes">
+        <span></span>
+        <span></span>
+      </div>
+      <div class="mouth"></div>
+      <div class="feet ">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="shadow"></div>
+    </div>
+  </div>
+
+  <script src="src/main.ts" type="module"> defer</script>
 </body>
 
 </html>
