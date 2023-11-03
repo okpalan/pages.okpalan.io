@@ -1,5 +1,4 @@
 :root {
-  --custom-cursor: url('/static/svg/cursor.svg');
   --mouse-x: 0;
   --mouse-y: 0;
 }
@@ -9,5 +8,5 @@ html,
   position: relative;
   width: 40px;
   height: 40px;
-  cursor: url('/static/svg/cursor.svg'), auto;
+  cursor: url('/static/img/cursor.svg'), auto;
 }

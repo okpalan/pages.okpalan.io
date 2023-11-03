@@ -1,8 +1,9 @@
 @import "./css/base.css";
-
+@import "./tools/mixins.scss";
 // patterns
 @import "./patterns/palette.scss";
 @import "./patterns/gradients.scss";
 @import "./patterns/neumorphix.scss";
-@import './components/chart.scss';
 
+@import "./components/parallax.scss";
+@import './components/chart.scss';
