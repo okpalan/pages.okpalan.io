@@ -1,130 +1,42 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<svg
-   id="prefix__svg38"
-   viewBox="0 0 255.9263 255.9262"
-   version="1.1"
-   width="255.9998"
-   height="255.99969"
-   sodipodi:docname="favicon.svg"
-   inkscape:version="1.3 (0e150ed6c4, 2023-07-21)"
+<svg id="prefix__svg38" viewBox="0 0 255.9263 255.9262" version="1.1" width="255.9998" height="255.99969"
+   sodipodi:docname="favicon.svg" inkscape:version="1.3 (0e150ed6c4, 2023-07-21)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:xlink="http://www.w3.org/1999/xlink"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:svg="http://www.w3.org/2000/svg">
-  <sodipodi:namedview
-     id="namedview1"
-     pagecolor="#ffffff"
-     bordercolor="#000000"
-     borderopacity="0.25"
-     inkscape:showpageshadow="2"
-     inkscape:pageopacity="0.0"
-     inkscape:pagecheckerboard="0"
-     inkscape:deskcolor="#d1d1d1"
-     inkscape:zoom="1.2363402"
-     inkscape:cx="255.9975"
-     inkscape:cy="255.9975"
-     inkscape:window-width="1600"
-     inkscape:window-height="829"
-     inkscape:window-x="-8"
-     inkscape:window-y="-8"
-     inkscape:window-maximized="1"
-     inkscape:current-layer="prefix__svg38" />
-  <style
-     id="style22" />
-  <defs
-     id="prefix__defs35">
-    <radialGradient
-       xlink:href="#prefix__grad1"
-       id="prefix__radialGradient1"
-       cx="115.595"
-       cy="117.021"
-       fx="115.595"
-       fy="117.021"
-       r="62.470001"
-       gradientTransform="matrix(2.1065311,-0.01543287,0.01626947,2.4431253,-110.89212,-135.9023)"
-       gradientUnits="userSpaceOnUse"
-       spreadMethod="reflect" />
-    <radialGradient
-       xlink:href="#prefix__linearGradient1"
-       id="prefix__radialGradient3"
-       cx="112.459"
-       cy="107.426"
-       fx="112.459"
-       fy="107.426"
-       r="62.470001"
-       gradientTransform="matrix(2.1065912,0,0,2.1104434,-108.99419,-98.755374)"
-       gradientUnits="userSpaceOnUse" />
-    <linearGradient
-       id="prefix__linearGradient1">
-      <stop
-         offset="0"
-         id="prefix__stop3"
-         stop-color="#20fdbe"
-         stop-opacity="1" />
-      <stop
-         offset=".5"
-         id="prefix__stop4"
-         stop-color="#21a2c4"
-         stop-opacity="1" />
-      <stop
-         offset=".75"
-         id="prefix__stop5"
-         stop-color="#21b2c6"
-         stop-opacity="1" />
-      <stop
-         offset="1"
-         id="prefix__stop2"
-         stop-color="#08c181"
-         stop-opacity="1" />
-    </linearGradient>
-    <linearGradient
-       id="prefix__grad1"
-       gradientTransform="matrix(6.5255,0,0,6.23825,47.165,38.827)"
-       x1="0.403"
-       y1="1.386"
-       x2="19.579"
-       y2="1.386"
-       gradientUnits="userSpaceOnUse">
-      <stop
-         offset=".065"
-         id="prefix__stop28"
-         stop-color="#21c2c8"
-         stop-opacity="1" />
-      <stop
-         offset=".379"
-         id="prefix__stop30"
-         stop-color="#2283c0"
-         stop-opacity="1" />
-      <stop
-         offset=".771"
-         id="prefix__stop1"
-         stop-color="#20fdbe"
-         stop-opacity="1" />
-      <stop
-         offset="1"
-         id="prefix__stop32"
-         stop-color="#08c181"
-         stop-opacity="1" />
-    </linearGradient>
-  </defs>
-  <animate
-     attributeName="stroke-dasharray"
-     values="0, 100; 100, 0"
-     dur="2s"
-     repeatCount="indefinite" />
-  <animate
-     attributeName="stroke-dashoffset"
-     values="100; 0"
-     dur="2s"
-     repeatCount="indefinite" />
-  <path
-     id="prefix__triskel"
-     d="m 126.73111,124.79329 a 44.043602,46.193654 0 0 0 5.49782,-92.207184 24.732747,25.940419 0 1 0 -8.38772,51.12953 13.44056,14.096627 0 0 0 4.65085,-14.604723 C 126.70012,65.8223 124.48719,66.954512 127.0401,55.550386 a 13.44056,11.277101 0 0 1 20.42932,5.144959 16.129472,25.374729 0 0 1 3.26691,25.712791 53.953212,35.116909 16.701531 0 1 -40.95367,18.776494 51.300322,53.805027 0 0 1 39.63671,-99.2554911 79.29941,77.532445 0.93500322 0 1 23.65523,125.4053711 47.98143,50.324379 0 0 0 52.55227,84.2147 26.081148,27.354097 0 0 0 -33.65489,-41.79781 13.44056,14.096627 0 0 0 2.74191,13.70258 9.7219307,12.634732 49.958873 0 1 8.43972,17.80431 33.609945,21.139912 4.443238 0 1 -32.79394,-24.90864 41.87263,43.917184 0 0 1 83.43928,7.49939 68.921059,62.073466 51.165836 0 1 -129.02977,0 48.124425,50.473406 0 0 0 -95.764875,10.10689 26.967362,26.185062 3.9319666 0 0 53.910237,-1.11322 13.44056,14.096627 0 0 0 -11.90761,-8.99367 13.44056,14.096627 0 0 0 -4.166865,5.66706 13.44056,14.096627 0 0 1 -2.956903,8.42957 16.213016,17.003742 0 0 1 -1.115965,-33.98733 36.595037,38.381398 0 0 1 15.859484,74.93896 56.731144,59.501089 0 0 1 -40.414679,-111.19672 c 22.29727,-14.23765 41.087656,-13.3915 56.221161,-11.09407 z"
-     stroke="url(#prefix__radialGradient1)"
-     stroke-width="3.58027"
-     fill="url(#prefix__radialGradient3)"
-     stroke-linecap="round"
-     stroke-dasharray="none"
-     style="fill:url(#prefix__radialGradient3);stroke:url(#prefix__radialGradient1)" />
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd" xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg">
+   <sodipodi:namedview id="namedview1" pagecolor="#ffffff" bordercolor="#000000" borderopacity="0.25"
+      inkscape:showpageshadow="2" inkscape:pageopacity="0.0" inkscape:pagecheckerboard="0" inkscape:deskcolor="#d1d1d1"
+      inkscape:zoom="1.2363402" inkscape:cx="255.9975" inkscape:cy="255.9975" inkscape:window-width="1600"
+      inkscape:window-height="829" inkscape:window-x="-8" inkscape:window-y="-8" inkscape:window-maximized="1"
+      inkscape:current-layer="prefix__svg38" />
+   <style id="style22" />
+   <defs id="prefix__defs35">
+      <radialGradient xlink:href="#prefix__grad1" id="prefix__radialGradient1" cx="115.595" cy="117.021" fx="115.595"
+         fy="117.021" r="62.470001"
+         gradientTransform="matrix(2.1065311,-0.01543287,0.01626947,2.4431253,-110.89212,-135.9023)"
+         gradientUnits="userSpaceOnUse" spreadMethod="reflect" />
+      <radialGradient xlink:href="#prefix__linearGradient1" id="prefix__radialGradient3" cx="112.459" cy="107.426"
+         fx="112.459" fy="107.426" r="62.470001"
+         gradientTransform="matrix(2.1065912,0,0,2.1104434,-108.99419,-98.755374)" gradientUnits="userSpaceOnUse" />
+      <linearGradient id="prefix__linearGradient1">
+         <stop offset="0" id="prefix__stop3" stop-color="#20fdbe" stop-opacity="1" />
+         <stop offset=".5" id="prefix__stop4" stop-color="#21a2c4" stop-opacity="1" />
+         <stop offset=".75" id="prefix__stop5" stop-color="#21b2c6" stop-opacity="1" />
+         <stop offset="1" id="prefix__stop2" stop-color="#08c181" stop-opacity="1" />
+      </linearGradient>
+      <linearGradient id="prefix__grad1" gradientTransform="matrix(6.5255,0,0,6.23825,47.165,38.827)" x1="0.403"
+         y1="1.386" x2="19.579" y2="1.386" gradientUnits="userSpaceOnUse">
+         <stop offset=".065" id="prefix__stop28" stop-color="#21c2c8" stop-opacity="1" />
+         <stop offset=".379" id="prefix__stop30" stop-color="#2283c0" stop-opacity="1" />
+         <stop offset=".771" id="prefix__stop1" stop-color="#20fdbe" stop-opacity="1" />
+         <stop offset="1" id="prefix__stop32" stop-color="#08c181" stop-opacity="1" />
+      </linearGradient>
+   </defs>
+   <animate attributeName="stroke-dasharray" values="0, 100; 100, 0" dur="2s" repeatCount="indefinite" />
+   <animate attributeName="stroke-dashoffset" values="100; 0" dur="2s" repeatCount="indefinite" />
+   <path id="prefix__triskel"
+      d="m 126.73111,124.79329 a 44.043602,46.193654 0 0 0 5.49782,-92.207184 24.732747,25.940419 0 1 0 -8.38772,51.12953 13.44056,14.096627 0 0 0 4.65085,-14.604723 C 126.70012,65.8223 124.48719,66.954512 127.0401,55.550386 a 13.44056,11.277101 0 0 1 20.42932,5.144959 16.129472,25.374729 0 0 1 3.26691,25.712791 53.953212,35.116909 16.701531 0 1 -40.95367,18.776494 51.300322,53.805027 0 0 1 39.63671,-99.2554911 79.29941,77.532445 0.93500322 0 1 23.65523,125.4053711 47.98143,50.324379 0 0 0 52.55227,84.2147 26.081148,27.354097 0 0 0 -33.65489,-41.79781 13.44056,14.096627 0 0 0 2.74191,13.70258 9.7219307,12.634732 49.958873 0 1 8.43972,17.80431 33.609945,21.139912 4.443238 0 1 -32.79394,-24.90864 41.87263,43.917184 0 0 1 83.43928,7.49939 68.921059,62.073466 51.165836 0 1 -129.02977,0 48.124425,50.473406 0 0 0 -95.764875,10.10689 26.967362,26.185062 3.9319666 0 0 53.910237,-1.11322 13.44056,14.096627 0 0 0 -11.90761,-8.99367 13.44056,14.096627 0 0 0 -4.166865,5.66706 13.44056,14.096627 0 0 1 -2.956903,8.42957 16.213016,17.003742 0 0 1 -1.115965,-33.98733 36.595037,38.381398 0 0 1 15.859484,74.93896 56.731144,59.501089 0 0 1 -40.414679,-111.19672 c 22.29727,-14.23765 41.087656,-13.3915 56.221161,-11.09407 z"
+      stroke="url(#prefix__radialGradient1)" stroke-width="3.58027" fill="url(#prefix__radialGradient3)"
+      stroke-linecap="round" stroke-dasharray="none"
+      style="fill:url(#prefix__radialGradient3);stroke:url(#prefix__radialGradient1)" />
 </svg>
