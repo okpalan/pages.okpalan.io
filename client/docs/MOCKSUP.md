@@ -1,9 +1,6 @@
 # Mock Up
 
 
-
-
-
 Home Page:
 Initalization Page: 
 

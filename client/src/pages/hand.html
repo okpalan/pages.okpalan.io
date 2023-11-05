@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hand</title>
+    <style>
+        @keyframes wave {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            50% {
+                transform: rotate(15deg);
+            }
+
+            100% {
+                transform: rotate(0deg);
+            }
+        }
+
+        #thumb {
+            animation: wave 2s infinite;
+            transform-origin: 50% 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <svg>
+        <path id="thumb"
+            d="M10.52,22.54L10.52,22.54c2.11,0,4.08,0.63,5.73,1.71v-2.84c0-2.89,1.18-5.52,3.09-7.43c1.9-1.9,4.53-3.09,7.43-3.09l0,0 c2.23,0,4.3,0.7,6.01,1.9v-2.29c0-2.89,1.18-5.52,3.09-7.43C37.77,1.18,40.4,0,43.29,0l0,0c2.89,0,5.52,1.18,7.43,3.09 c1.9,1.9,3.09,4.53,3.09,7.43v2.32c1.68-1.15,3.71-1.82,5.9-1.82l0,0c2.89,0,5.52,1.18,7.43,3.09c1.9,1.9,3.09,4.54,3.09,7.43 v49.97c0.13,0.86,0.2,1.74,0.2,2.64v2.94l0.26-0.24c1.81-1.7,3.58-3.47,4.24-4.14c4.48-4.49,9.31-5.44,13.14-4.23 c1.73,0.55,3.23,1.53,4.41,2.83c1.17,1.29,2.03,2.89,2.46,4.69c1.01,4.25-0.36,9.6-5.64,14.32l-0.09,0.09l0,0l-0.02,0.02 l-23.12,23.34l0,0.01c-0.05,0.05-0.11,0.11-0.17,0.16c-3.38,3.25-6.69,5.47-10.29,6.9c-3.66,1.46-7.52,2.06-11.94,2.06H28.71 c-7.96,0-15.13-3.26-20.31-8.5C3.2,109.11,0,101.84,0,93.85V74.13c0-0.69,0.04-1.37,0.11-2.04C0.04,71.86,0,71.61,0.01,71.36v-38.3 c0-2.89,1.18-5.52,3.09-7.43C5,23.72,7.63,22.54,10.52,22.54L10.52,22.54z" />
+    </svg>
+    <script defer>
+        document.getElementById('thumb').addEventListener('mouseover', function () {
+            this.style.animation = 'wave 0.5s infinite';
+        });
+
+        document.getElementById('thumb').addEventListener('mouseout', function () {
+            this.style.animation = '';
+        });
+
+    </script>
+</body>
+
+</html>
