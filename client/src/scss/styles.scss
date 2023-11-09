@@ -1,6 +1,9 @@
 @import "./css/base.css";
+// 
 @import "./tools/mixins.scss";
-// patterns
 
+// patterns
 @import "./components/parallax.scss";
-@import './components/chart.scss';
+
+// ui
+@import "./ui/theme.scss";

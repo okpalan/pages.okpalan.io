@@ -24,10 +24,5 @@ body,
   position: absolute;
   transform: translate(var(--mouse-x), var(--mouse-y));
   transition: transform 0.2s;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  overflow: hidden;
 }
 

@@ -10,3 +10,23 @@
 .clearfix:after {
     clear: both;
 }
+
+:root {
+    --typo-font-size: 45px;
+    --line-height: 45px;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .drop-caps {
+    font-family: Century;
+    font-size: var(--typo-font-size);
+  }
+  
+  .drop-caps::first-letter {
+    float: left; /* Use float instead of left */
+    font-size: 2.5em;
+    height: var(--line-height);
+    line-height: var(--line-height);
+  }
+  
