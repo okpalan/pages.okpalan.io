@@ -16,9 +16,7 @@
   },
   "dependencies": {
     "@tweenjs/tween.js": "^21.0.0",
-    "cash-dom": "^8.1.5",
     "d3": "^7.8.5",
-    "locomotive-scroll": "^4.1.4",
     "modernizr": "^3.13.0",
     "sass": "^1.69.4",
     "typed.js": "^2.0.16",

@@ -2,7 +2,6 @@
 @import "./text-3d.css";
 @import "./compactability.css";
 @import "./misc.css";
-@import "./eye.css";
 @import './cursor.css';
 @import "./ghost.css";
 @import "./font-awesome.css";
@@ -11,4 +10,3 @@
 
 @import "./gradient.css";
 @import "./palette.css";
-@import "./eye.css";

@@ -8,5 +8,5 @@ html,
   position: relative;
   width: 40px;
   height: 40px;
-  cursor: url('/static/img/cursor.svg'), auto;
+  cursor: url('/static/img/cursor.svg'),  pointer;
 }

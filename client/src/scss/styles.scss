@@ -1,9 +1,9 @@
 @import "./css/base.css";
-// 
+
+@import "./patterns/neumorphix.scss";
+
 @import "./tools/mixins.scss";
 
-// patterns
-@import "./components/parallax.scss";
-
-// ui
 @import "./ui/theme.scss";
+@import "./ui/background.scss";
+@import "./ui/neu-elements.scss";

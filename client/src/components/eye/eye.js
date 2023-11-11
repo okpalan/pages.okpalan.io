@@ -1,4 +1,5 @@
 // Get references to the eye elements and their lids
+import "./eye.css";
 const leftEye = document.querySelector('.left-eye');
 const rightEye = document.querySelector('.right-eye');
 const leftEyeLid = document.querySelector('.left-eye-lid');
