@@ -1,6 +1,6 @@
-// vite.config.js
 import { defineConfig } from 'vite';
 import path from 'path';
+import { VitePWA } from 'vite-plugin-pwa';
 
 export default defineConfig({
   base: '/',
@@ -12,9 +12,23 @@ export default defineConfig({
   build: {
     rollupOptions: {
       external: [
-        path.resolve(process.cwd(), '/src/utils/index.js'),
-        
-    ],
+        // Specify any other external modules if needed
+      ],
+    },
+  },
+  plugins: [
+    VitePWA(),
+  ],
+  optimizeDeps: {
+    include: ['workerize-loader'],
+  },
+  server: {
+    // You might need to adjust this depending on your project structure
+    proxy: {
+      // '/src/utils/index.js': {
+      //   target: 'http://localhost', // Adjust the target URL as needed
+      //   changeOrigin: true,
+      // },
     },
   },
 });
