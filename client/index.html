@@ -6,12 +6,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Nnamdi Okpala Official Website</title>
   <script type="module" src="./src/main.ts" defer></script>
+  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
 </head>
 
 <body>
   <main id="app" role="application">
-    <!-- Neumorphic button -->
-
     <div id="competence-chart"></div>
     <div class="eye-container">
       <div class="eye left-eye">
@@ -28,9 +28,9 @@
     <div id="hand" class="parallax-layer layer-1"></div>
     <div id="competence-chart"></div>
     <canvas id="voronoiCanvas">
-      
+      <p>Your browser does not support the HTML5Canvas.</p>
     </canvas>
-
+    <model-viewer src="assets/HTC_Vive_Headset.gltf" alt="VR Headset" auto-rotate camera-controls ar ios-src="assets/HTC_Vive_Headset.gltf"></model-viewer>
     <section id="intro" class="slant">
       <h1>Welcome to my website</h1>
     </section>

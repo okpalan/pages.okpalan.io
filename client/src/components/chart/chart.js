@@ -76,16 +76,16 @@ arcs.attr('d', function (d) {
         return arc(d);
     }
 })
-.transition() // start a transition
-.duration(1500) // for two seconds
-.attrTween('d', function (d) {
-    // interpolate the end angle from 0 to its final value
-    var i = d3.interpolate(d.startAngle, d.endAngle);
-    return function(t) {
-        d.endAngle = i(t);
-        return arc(d);
-    };
-});
+    .transition() // start a transition
+    .duration(1500) // for two seconds
+    .attrTween('d', function (d) {
+        // interpolate the end angle from 0 to its final value
+        var i = d3.interpolate(d.startAngle, d.endAngle);
+        return function (t) {
+            d.endAngle = i(t);
+            return arc(d);
+        };
+    });
 
 // Create a div element for the tooltip
 const tooltip = d3.select(options.elId) // Append tooltip to the body

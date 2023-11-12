@@ -11,6 +11,12 @@ dependencies:
   d3:
     specifier: ^7.8.5
     version: 7.8.5
+  debounce:
+    specifier: ^1.2.1
+    version: 1.2.1
+  lodash:
+    specifier: ^4.17.21
+    version: 4.17.21
   modernizr:
     specifier: ^3.13.0
     version: 3.13.0
@@ -2070,6 +2076,10 @@ packages:
       d3-timer: 3.0.1
       d3-transition: 3.0.1(d3-selection@3.0.0)
       d3-zoom: 3.0.0
+    dev: false
+
+  /debounce@1.2.1:
+    resolution: {integrity: sha512-XRRe6Glud4rd/ZGQfiV1ruXSfbvfJedlV9Y6zOlP+2K04vBYiJEte6stfFkCP03aMnY5tsipamumUjL14fofug==}
     dev: false
 
   /debug@4.3.4:

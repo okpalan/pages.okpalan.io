@@ -9,26 +9,7 @@ export default defineConfig({
       '@': path.resolve(__dirname, 'src'),
     },
   },
-  build: {
-    rollupOptions: {
-      external: [
-        // Specify any other external modules if needed
-      ],
-    },
-  },
   plugins: [
     VitePWA(),
   ],
-  optimizeDeps: {
-    include: ['workerize-loader'],
-  },
-  server: {
-    // You might need to adjust this depending on your project structure
-    proxy: {
-      // '/src/utils/index.js': {
-      //   target: 'http://localhost', // Adjust the target URL as needed
-      //   changeOrigin: true,
-      // },
-    },
-  },
 });
