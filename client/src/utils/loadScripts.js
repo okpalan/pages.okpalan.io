@@ -1,7 +1,7 @@
 export function loadScripts(scriptLocations, callback) {
     var scriptsToLoad = scriptLocations.length;
     var scriptsLoaded = 0;
-
+    
     function loadScript(src) {
         var script = document.createElement('script');
         script.src = src;

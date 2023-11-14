@@ -1,1 +1,2 @@
-export { loadScripts } from "./loadScripts.js";
+import "./stub.js";
+export {loadScript} from "./loadScripts.js";

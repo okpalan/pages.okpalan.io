@@ -1,3 +1,5 @@
+// cdnjs
+import "https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js";
 import "./scss/styles.scss";
 
 // components

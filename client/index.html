@@ -6,13 +6,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Nnamdi Okpala Official Website</title>
   <script type="module" src="./src/main.ts" defer></script>
-  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+  <script type="module" src=""></script>
   <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
 </head>
 
 <body>
   <main id="app" role="application">
-    <div id="competence-chart"></div>
+    <nav class="navbar"></nav>
     <div class="eye-container">
       <div class="eye left-eye">
         <div class="eye-lid left-eye-lid"></div>
@@ -25,14 +25,15 @@
       </div>
     </div>
     </div>
+    <div id="model-view"> 
+      <model-viewer alt="" shadow-intensity="1" src="./src/assets/models/me.glb" seamless ar ar-modes camera-controls></model-viewer> 
+    </div>
     <div id="hand" class="parallax-layer layer-1"></div>
     <div id="competence-chart"></div>
-    <canvas id="voronoiCanvas">
-      <p>Your browser does not support the HTML5Canvas.</p>
-    </canvas>
-    <model-viewer src="assets/HTC_Vive_Headset.gltf" alt="VR Headset" auto-rotate camera-controls ar ios-src="assets/HTC_Vive_Headset.gltf"></model-viewer>
     <section id="intro" class="slant">
       <h1>Welcome to my website</h1>
+      <img src="./src/assets/favicon.svg" width="100px" />
+      <img src="./src/assets/img/butterfly.png" alt="" srcset="">
     </section>
     <section id="education">
       <h2>Education</h2>
@@ -58,7 +59,6 @@
         <li>New Skills Academy Level 2 HTML5 AND CSS 2</li>
       </ul>
     </section>
-
     <section id="work" class="parallax-layer-2 layer-2">
       <h2>Work History</h2>
       <ul>
@@ -69,6 +69,7 @@
     </section>
     <section id="skills" class="parallax-layer-3 layer-3">
       <h2>Skills</h2>
+      <div id="competence-chart"></div>
       <ul>
         <li>Microsoft Office Suite, Excel, Word, Outlook.</li>
         <li>JavaScript, C, Python.</li>

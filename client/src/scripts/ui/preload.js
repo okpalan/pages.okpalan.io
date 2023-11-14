@@ -21,4 +21,5 @@ Reflect.construct(yepnope, ([
         yep: 'https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css',
         nope: '/static/css/skeleton.css'
     }
-]))
+]));
+

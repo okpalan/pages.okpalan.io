@@ -1,8 +1,15 @@
 @import "./css/base.css";
 
+// patterns
 @import "./patterns/neumorphix.scss";
+@import "./patterns/theme.scss";
 
+// tools
 @import "./tools/mixins.scss";
 
-@import "./ui/theme.scss";
-@import "./ui/neu-elements.scss";
+// ui
+@import "./ui/education.scss";
+@import "./ui/intro.scss";
+@import "./ui/skills.scss";
+@import "./ui/work.scss";
+@import "./ui/models.scss";
