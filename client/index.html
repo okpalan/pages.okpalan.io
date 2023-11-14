@@ -6,27 +6,34 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Nnamdi Okpala Official Website</title>
   <script type="module" src="./src/main.ts" defer></script>
-  <script type="module" src=""></script>
   <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
 </head>
 
 <body>
   <main id="application" role="application">
-    <section class="container u-full-width" id="landing">
-      <div class="row">
-        <nav class="navbar"></nav>
-        <div class="four columns ">
-          <div id="competence-chart "></div>
+    <nav class="navbar u-full-width">
+      <a href="#" class="logo">
+        <img src="./src/favicon.png" alt="Logo" width="50" height="50">
+      </a>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Products</a></li>
+      </ul>
+    </nav>
+    <section class="container u-full-width">
+      <div class="row ">
+        <div class="one-half column ">
+          <div id="competence-chart"></div>
         </div>
-        <div class="model-view four columns">
-          <model-viewer alt="" shadow-intensity="1" src="./src/assets/models/me.glb" seamless
-            camera-controls></model-viewer>
+        <div class="one-half column">
+          <div class="model-view">
+            <model-viewer alt="" src="./src/assets/models/nnamdi.glb" seamless camera-controls></model-viewer>
+          </div>
         </div>
-        <div class="four columns">
-
-        </div>
-
       </div>
+
+
       </div>
     </section>
   </main>

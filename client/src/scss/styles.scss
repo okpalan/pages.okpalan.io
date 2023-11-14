@@ -1,5 +1,16 @@
+// components
+@use "scss/components/gradient.scss" as *;
+@use "scss/components/palette.scss" as *;
+@use "scss/components/ghost.scss" as *;
+@use "scss/components/gradient.scss" as *;
+@use "scss/components/text-3d.scss" as *;
+@use "scss/components/torch.scss" as *;
+@use "scss/components/glitch.scss" as *;
+
 // css 
-@import "./css/base.css";
+@import "css/font-awesome.css";
+@import "css/normalize.css";
+@import "css/skeleton.css";
 
 // patterns
 @import "./patterns/neumorphix.scss";
@@ -8,6 +19,8 @@
 // tools
 @import "./tools/mixins.scss";
 
+
+
 // ui
 @import "./ui/education.scss";
 @import "./ui/landing.scss";
@@ -15,3 +28,4 @@
 @import "./ui/work.scss";
 @import "./ui/models.scss";
 @import "./ui/navbar.scss";
+
