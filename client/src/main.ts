@@ -1,5 +1,8 @@
 // cdnjs
 import "https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js";
+import "https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css";
+
+
 import "./scss/styles.scss";
 
 // components
