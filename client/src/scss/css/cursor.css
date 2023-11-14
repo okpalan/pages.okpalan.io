@@ -3,10 +3,3 @@
   --mouse-y: 0;
 }
 
-html,
-#app {
-  position: relative;
-  width: 40px;
-  height: 40px;
-  cursor: url('/static/img/cursor.svg'),  pointer;
-}

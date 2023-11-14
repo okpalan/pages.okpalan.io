@@ -1,20 +1,17 @@
-import "./voronoi.css"
-// Get the canvas element
+import "./voronoi.css";
 var canvas = document.getElementById("voronoiCanvas");
 var ctx = canvas.getContext("2d");
 
-// Hex to RGB conversion function
-function hexToRgb(hex) {
-  hex = hex.replace(/^#/, '');
-  const bigint = parseInt(hex, 16);
-  const r = (bigint >> 16) & 255;
-  const g = (bigint >> 8) & 255;
-  const b = bigint & 255;
-  return { r: r, g: g, b: b };
-}
-
 // Generate random points as seeds
-var numPoints = 8;
+var numPoints = 20;
+var colors = [
+  [34, 43, 73, 1],
+  [213, 34, 21, 1],
+  [234, 246, 255, 1], // alice blue
+  [35, 37, 40, 1]     // rasin black
+];
+
+
 var points = [];
 for (var i = 0; i < numPoints; i++) {
   points.push({
@@ -22,11 +19,6 @@ for (var i = 0; i < numPoints; i++) {
     y: Math.random() * canvas.height,
   });
 }
-
-// Define a palette of colors
-var colors = [
-  "#EDE0D4", "#E6CCB2", "#DDB892", "#B08968",
-];
 
 // Calculate distance between two points
 function distance(p1, p2) {
@@ -47,9 +39,8 @@ function findClosestSeedPoint(point) {
     }
   }
   return closestPointIndex;
-}
+};
 
-// Assign colors based on proximity
 function assignColors() {
   var imageData = ctx.createImageData(canvas.width, canvas.height);
   var data = imageData.data;
@@ -58,16 +49,13 @@ function assignColors() {
     for (var x = 0; x < canvas.width; x++) {
       var closestPointIndex = findClosestSeedPoint({ x: x, y: y });
 
-      // Set color based on the index of the closest point
-      var colorIndex = closestPointIndex % colors.length;
-      var color = colors[colorIndex];
-      var rgb = hexToRgb(color);
-
+      // Select color based on the index of the closest point
+      var color = colors[closestPointIndex % colors.length];
       var pixelIndex = (y * canvas.width + x) * 4;
-      data[pixelIndex] = rgb.r; // Red channel
-      data[pixelIndex + 1] = rgb.g; // Green channel
-      data[pixelIndex + 2] = rgb.b; // Blue channel
-      data[pixelIndex + 3] = 255; // Alpha channel
+      data[pixelIndex] = color[0]; // Red channel
+      data[pixelIndex + 1] = color[1]; // Green channel
+      data[pixelIndex + 2] = color[2]; // Blue channel
+      data[pixelIndex + 3] = color[3] * 255; // Alpha channel (scaled to 0-255)
     }
   }
 
@@ -80,11 +68,10 @@ function drawVoronoi() {
   assignColors();
 }
 
-// Update Voronoi diagram on mousemove
-const updateVoronoi = (e) => {
+function updateVoronoi(e) {
   // Get the mouse position
-  var { left, top, width, height } = canvas.getBoundingClientRect();
-  var mouseX =  e.clientX, mouseY = e.clientY -top;
+  var mouseX = canvas.cliente.clientX;
+  var mouseY = e.clientY;
 
   // Find the closest seed point to the mouse position
   var closestPointIndex = findClosestSeedPoint({ x: mouseX, y: mouseY });
@@ -100,18 +87,19 @@ const updateVoronoi = (e) => {
 
   // Redraw the Voronoi diagram
   drawVoronoi();
-};
+}
 
 // Redraw the diagram when the window is resized
-window.addEventListener("resize", function () {
+window.addEventListener("resize", function (e) {
   canvas.width = window.innerWidth;
   canvas.height = window.innerHeight;
   drawVoronoi();
 });
 
 // Add a mousemove event listener to the canvas
-canvas.addEventListener('mousemove', (e) => updateVoronoi(e), false);
+canvas.addEventListener('mousemove', function (e) {
+  // Update the Voronoi diagram
+  updateVoronoi(e);
+});
 
-// Initial drawing
 drawVoronoi();
-
