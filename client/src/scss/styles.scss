@@ -1,11 +1,12 @@
 // components
 @use "scss/components/gradient.scss" as *;
 @use "scss/components/palette.scss" as *;
-@use "scss/components/ghost.scss" as *;
+@use "scss/components/ghost.scss" as  *;
 @use "scss/components/gradient.scss" as *;
 @use "scss/components/text-3d.scss" as *;
-@use "scss/components/torch.scss" as *;
+@use "scss/components/torch.scss" as  *;
 @use "scss/components/glitch.scss" as *;
+@use "scss/components/misc.scss" as  *;
 
 // css 
 @import "css/font-awesome.css";

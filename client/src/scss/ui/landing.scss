@@ -1,28 +1,4 @@
-.navbar {
-    display: flex;
-    align-items: center;
-    flex-flow: row nowrap;
-    .navbar-brand img {
-        will-change: transform;
-        transition: transform 1.5s ease-in-out;
-        width: 120px;
-        height: 120px;
-        &:hover {
-            transform: rotate(360deg);
-        }
-    }
-        
-    ul {
-        list-style: none;
-        display: inline;
-        a {
-            text-decoration: unset;
-        }
-    }
 
+#landing {
+    
 }
-
-#landing{
-    background-image: url('assets/img/banner.png');
-
-}   

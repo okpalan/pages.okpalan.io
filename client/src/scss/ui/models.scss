@@ -4,7 +4,7 @@
 }
 
 model-viewer {
-    position: fixed;
     width: 50vw;
     height: 50vh;
+    overflow: hidden;
 }

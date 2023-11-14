@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,21 +7,46 @@
   <script type="module" src="./src/main.ts" defer></script>
   <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
 </head>
-
 <body>
   <main id="application" role="application">
-    
-    <section class="container  ">
-      <div class="row ">
-        <div class="two columns">
-          <div id="competence-chart"></div>
-
+    <section class="overlay u-full-width ">
+      <nav class="navbar-fixed">
+        <div id="logo">
+        <a href=""><img src="src/favicon.png"  width="100px"/></a>
         </div>
-        <div class="five columns">
-          <div class="model-view">
-            <model-viewer alt="" src="./src/assets/models/nnamdi.glb" seamless camera-controls></model-viewer>
+        <a href="https://github.com/okpalan"><i class="fa fa-github"></i></a>
+        <a href="https://www.facebook.com/okpalan"><i class="fa fa-facebook"></i></a>
+        <a href="https://www.youtube.com/@okpalan">
+          <i class="fa fa-youtube"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/okpalan">
+          <i class="fa fa-linkedin"></i>
+        </a>
+        <div class="eye-container">
+          <div class="eye left-eye">
+            <div class="eye-lid left-eye-lid"></div>
+            <div class="pupil"></div>
+          </div>
+          <div class="glasses-bridge"></div>
+          <div class="eye right-eye">
+            <div class="eye-lid right-eye-lid"></div>
+            <div class="pupil"></div>
           </div>
         </div>
+      </nav>
+    </section>
+    <section class="u-full-width  triangular triangular--single" id="landing">
+      <div class="row torch">
+        <div class="four columns">
+          <div id="competence-chart"></div>
+        </div>
+        <div class="four columns">
+          <div class="model-view">
+            <model-viewer alt="Nnamdi" src="./src/assets/models/nnamdi.glb" seamless camera-controls></model-viewer>
+
+          </div>
+        </div>
+
       </div>
       </div>
     </section>

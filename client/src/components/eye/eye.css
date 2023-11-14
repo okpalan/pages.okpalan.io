@@ -8,7 +8,7 @@
 }
 
 .eye {
-  --eye-size: 80px;
+  --eye-size: 60px;
   --eye-color: #ffffff;
   width: var(--eye-size);
   height: var(--eye-size);
