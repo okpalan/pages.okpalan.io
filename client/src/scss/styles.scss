@@ -9,9 +9,7 @@
 @use "scss/components/misc.scss" as  *;
 
 // css 
-@import "css/font-awesome.css";
-@import "css/normalize.css";
-@import "css/skeleton.css";
+@import "css/base.css";
 
 // patterns
 @import "./patterns/neumorphix.scss";
@@ -27,4 +25,5 @@
 @import "./ui/skills.scss";
 @import "./ui/work.scss";
 @import "./ui/models.scss";
+@import "./ui/statics.scss";
 

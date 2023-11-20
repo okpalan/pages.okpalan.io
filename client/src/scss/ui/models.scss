@@ -3,8 +3,10 @@
     width: auto;
 }
 
-model-viewer {
-    width: 50vw;
-    height: 50vh;
-    overflow: hidden;
-}
+#model-viewer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh; /* Adjust the height as needed */
+  }
+  

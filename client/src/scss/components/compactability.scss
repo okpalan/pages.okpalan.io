@@ -11,17 +11,21 @@
   
 }
 
-
-
 html,
 body,
 #app {
   min-width: 100vw;
   min-height: 100vh;
-  height: 100vh;
+  height: 100%;
   width: 100vw;
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  @include neu-bg(135deg, $mint, $moonstone);
+  @include neu($moonstone, $mint);
 }
 
+// Apply text-3d effect
+#intro h1 {
+  @include text-3d;
+}

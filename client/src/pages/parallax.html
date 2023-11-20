@@ -1,148 +1,175 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>PARALLAX EFFECT - VERSION 2</title>
 	<style>
-	*,
-	*::before,
-	*::after {
-		box-sizing: border-box;
-	}
-	body {
-		margin: 0;
-		padding: 0;
-		font-family: sans-serif;
-		background-color: black;
-		color: white;
-	}
-	h1 {
-		font-size: 3vmax;
-	}
-	p {
-		font-size: 1vmax;
-	}
-	.page {
-		width: 100%;
-		height: 100vh;
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		overflow: hidden;
-	}
-	.scene-1 {
-		background-image: url(https://picsum.photos/id/1044/1920/1080);
-		background-size: cover;
-		background-repeat: no-repeat;
-	}
-	.scene-2,
-	.scene-3 {
-		position: relative;
-		background-image: url(http://www.prowaretech.com/img/beach.png), url(http://www.prowaretech.com/img/mountain.png), url(http://www.prowaretech.com/img/moon.png), url(http://www.prowaretech.com/img/stars.jpg);
-		background-size: cover;
-		background-repeat: no-repeat;
-	}
-	.scene-3::after {
-		content: "";
-		position: absolute;
-		top: 0;
-		left: 0;
-		right: 0;
-		bottom: 0;
-		background-color: slategray;
-		mix-blend-mode: color;
-	}
+		*,
+		*::before,
+		*::after {
+			box-sizing: border-box;
+		}
+
+		body {
+			margin: 0;
+			padding: 0;
+			font-family: sans-serif;
+			background-color: black;
+			color: white;
+		}
+
+		h1 {
+			font-size: 3vmax;
+		}
+
+		p {
+			font-size: 1vmax;
+		}
+
+		.page {
+			width: 100%;
+			height: 100vh;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			overflow: hidden;
+		}
+
+		.scene-1 {
+			background-image: url(https://picsum.photos/id/1044/1920/1080);
+			background-size: cover;
+			background-repeat: no-repeat;
+		}
+
+		.scene-2,
+		.scene-3 {
+			position: relative;
+			background-image: url(http://www.prowaretech.com/img/beach.png), url(http://www.prowaretech.com/img/mountain.png), url(http://www.prowaretech.com/img/moon.png), url(http://www.prowaretech.com/img/stars.jpg);
+			background-size: cover;
+			background-repeat: no-repeat;
+		}
+
+		.scene-3::after {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background-color: slategray;
+			mix-blend-mode: color;
+		}
 	</style>
 </head>
+
 <body>
-	
-	<div class="page"><h1>ACME</h1><h1>About Us</h1><p>SCROLL DOWN</p></div>
 
-	<div class="parallax-effect page scene-1"><h1>plain parallax effect</h1></div>
+	<div class="page">
+		<h1>ACME</h1>
+		<h1>About Us</h1>
+		<p>SCROLL DOWN</p>
+	</div>
 
-	<div class="page"><h1>Products</h1><p>SCROLL DOWN MORE</p></div>
+	<div class="parallax-effect page scene-1">
+		<h1>plain parallax effect</h1>
+	</div>
 
-	<div class="parallax-effect page scene-2" parallax-function="shift"><h1>parallax effect with multiple images &amp; horizontal slide</h1></div>
+	<div class="page">
+		<h1>Products</h1>
+		<p>SCROLL DOWN MORE</p>
+	</div>
 
-	<div class="page"><h1>Services</h1><p>KEEP SCROLLING</p></div>
+	<div class="parallax-effect page scene-2" parallax-function="shift">
+		<h1>parallax effect with multiple images &amp; horizontal slide</h1>
+	</div>
+
+	<div class="page">
+		<h1>Services</h1>
+		<p>KEEP SCROLLING</p>
+	</div>
 
 	<div class="parallax-effect page scene-3" parallax-function="shift"></div>
 
-	<div class="page"><h1>Support</h1><p>END</p></div>
+	<div class="page">
+		<h1>Support</h1>
+		<p>END</p>
+	</div>
 
-<script type="text/javascript">
-function windowWidth(){
-	if(window.innerWidth)
-		return window.innerWidth;
-	else if(document.documentElement.clientWidth == 0)
-		return document.body.clientWidth;
-	else
-		return document.documentElement.clientWidth;
-}
-function shift(position, element) {
-	var beachY = Math.round(position * 0.3), // the decimals here are the ratio, 0 would leave the image still (no parallax effect)
-	mountainY = Math.round(position * 0.5),
-	moonX = Math.round(position * 0.8 + windowWidth() / 4), // this is being applied to the X coordinate and the value of 0.8 is used to slow down the movement of the moon
-	moonY = Math.round(position * 0.2),
-	starsY = Math.round(position * 0.9);
-	element.style.backgroundPosition = "50% " + beachY + "px, 50% " + mountainY + "px, " + moonX + "px " + moonY + "px, 50% " + starsY + "px";
-}
-</script>
+	<script type="text/javascript">
+		function windowWidth() {
+			if (window.innerWidth)
+				return window.innerWidth;
+			else if (document.documentElement.clientWidth == 0)
+				return document.body.clientWidth;
+			else
+				return document.documentElement.clientWidth;
+		}
+		function shift(position, element) {
+			var beachY = Math.round(position * 0.3), // the decimals here are the ratio, 0 would leave the image still (no parallax effect)
+				mountainY = Math.round(position * 0.5),
+				moonX = Math.round(position * 0.8 + windowWidth() / 4), // this is being applied to the X coordinate and the value of 0.8 is used to slow down the movement of the moon
+				moonY = Math.round(position * 0.2),
+				starsY = Math.round(position * 0.9);
+			element.style.backgroundPosition = "50% " + beachY + "px, 50% " + mountainY + "px, " + moonX + "px " + moonY + "px, 50% " + starsY + "px";
+		}
+	</script>
 
-<script type="text/javascript">
-(function () {
-	var w = window, callFunc = function () {
-		var divs = document.getElementsByClassName("parallax-effect");
-		for (var i = 0; i < divs.length; i++) {
-			var o = divs[i], y = (function () {
-				if (w.pageYOffset) {
-					return w.pageYOffset;
-				}
-				else {
-					var d = document;
-					if (d.documentElement.scrollTop == 0) {
-						return d.body.scrollTop;
+	<script type="text/javascript">
+		(function () {
+			var w = window, callFunc = function () {
+				var divs = document.getElementsByClassName("parallax-effect");
+				for (var i = 0; i < divs.length; i++) {
+					var o = divs[i], y = (function () {
+						if (w.pageYOffset) {
+							return w.pageYOffset;
+						}
+						else {
+							var d = document;
+							if (d.documentElement.scrollTop == 0) {
+								return d.body.scrollTop;
+							}
+							else {
+								return d.documentElement.scrollTop;
+							}
+						}
+					})() - (o.offsetTop || 0), funcname = o.getAttribute("parallax-function");
+					if (funcname && navigator.userAgent.indexOf("MSIE") < 0 && navigator.userAgent.indexOf("Trident") < 0) {
+						if (typeof w[funcname] == "function") {
+							w[funcname](y, o);
+						}
+						else {
+							console.log("window." + funcname + " is not a function");
+						}
 					}
 					else {
-						return d.documentElement.scrollTop;
+						var ratio = parseFloat(o.getAttribute("background-parallax-ratio") || 0.5);
+						if (isNaN(ratio)) {
+							ratio = 0.5;
+						}
+						y *= (o.style.backgroundAttachment == "fixed" ? 0 : 1) - ratio;
+						o.style.backgroundPosition = (o.getAttribute("background-position-x") || "50%") + " " + Math.round(y) + "px";
 					}
 				}
-			})() - (o.offsetTop || 0), funcname = o.getAttribute("parallax-function");
-			if (funcname && navigator.userAgent.indexOf("MSIE") < 0 && navigator.userAgent.indexOf("Trident") < 0) {
-				if (typeof w[funcname] == "function") {
-					w[funcname](y, o);
+			}, addHandler = function (type) {
+				if (w.addEventListener) {
+					w.addEventListener(type, callFunc, false);
+				} else if (w.attachEvent) {
+					w.attachEvent("on" + type, callFunc);
+				} else {
+					w["on" + type] = callFunc;
 				}
-				else {
-					console.log("window." + funcname + " is not a function");
-				}
-			}
-			else {
-				var ratio = parseFloat(o.getAttribute("background-parallax-ratio") || 0.5);
-				if (isNaN(ratio)) {
-					ratio = 0.5;
-				}
-				y *= (o.style.backgroundAttachment == "fixed" ? 0 : 1) - ratio;
-				o.style.backgroundPosition = (o.getAttribute("background-position-x") || "50%") + " " + Math.round(y) + "px";
-			}
-		}
-	}, addHandler = function (type) {
-		if (w.addEventListener) {
-			w.addEventListener(type, callFunc, false);
-		} else if (w.attachEvent) {
-			w.attachEvent("on" + type, callFunc);
-		} else {
-			w["on" + type] = callFunc;
-		}
-		};
-	addHandler("load");
-	addHandler("resize");
-	addHandler("scroll");
-	addHandler("deviceorientation");
-	addHandler("devicemotion");
-}());
-</script><!-- ALWAYS LOAD THIS LIBRARY AT THE END OF THE HTML DOCUMENT -->
+			};
+			addHandler("load");
+			addHandler("resize");
+			addHandler("scroll");
+			addHandler("deviceorientation");
+			addHandler("devicemotion");
+		}());
+	</script><!-- ALWAYS LOAD THIS LIBRARY AT THE END OF THE HTML DOCUMENT -->
 
 </body>
+
 </html>
