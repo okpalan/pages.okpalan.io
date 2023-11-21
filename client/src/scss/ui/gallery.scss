@@ -1,0 +1,47 @@
+.gallery-container {
+  position: static;
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+}
+
+.thumbnails {
+  position: absolute;
+  bottom: 8px;
+  display: flex;
+  flex-direction: row;
+  gap: 6px;
+}
+
+.thumbnails div {
+  width: 8px;
+  height: 8px;
+  cursor: pointer;
+  background: #aaa;
+  border-radius: 100%;
+}
+
+.thumbnails div.highlighted {
+  background-color: #777;
+}
+
+.slides {
+  margin: 0;
+  display: flex;
+  // width: 100%; /* Set to 100% to take the full width of the page */
+  overflow-x: auto; /* Enable horizontal scrolling if needed */
+}
+
+.slides > div {
+  flex: 0 0 100%; /* Set initial width to 100% */
+}
+
+.slides img {
+  width: 100%;
+  height: auto;
+  object-fit: cover; /* Adjust the object-fit property as needed */
+}
+
+.slides::-webkit-scrollbar {
+  display: none;
+}

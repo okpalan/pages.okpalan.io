@@ -1,0 +1,39 @@
+.text-overlay-image {
+    box-sizing: border-box;
+    position: relative;
+    margin: 8px;
+    max-width: 100%;
+    width: 100%;
+}
+
+.text-overlay-image figcaption {
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    background: linear-gradient(0deg, #00000088 30%, #ffffff44 100%);
+    color: #fff;
+    padding: 16px;
+    font-family: sans-serif;
+    font-weight: 700;
+    line-height: 1.2;
+    font-size: 28px;
+}
+
+.text-overlay-image figcaption h3 {
+    margin: 0;
+}
+
+span {
+    padding: 0 16px;
+    transition: opacity 0.3s;
+}
+
+.sibling-fade:hover span:not(:hover) {
+    opacity: 0.5;
+}

@@ -25,7 +25,3 @@ body,
   @include neu($moonstone, $mint);
 }
 
-// Apply text-3d effect
-#intro h1 {
-  @include text-3d;
-}

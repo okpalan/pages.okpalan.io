@@ -1,0 +1,49 @@
+.typewriter-effect {
+    display: flex;
+    justify-content: center;
+    font-family: monospace;
+  }
+  
+  .typewriter-effect > .text {
+    max-width: 0;
+    animation: typing 3s steps(var(--characters)) forwards;
+    white-space: nowrap;
+    overflow: hidden;
+  }
+  
+  .typewriter-effect::after {
+    content: " ";
+    animation: blink 1s infinite;
+    animation-timing-function: step-end;
+  }
+  
+  @keyframes typing {
+    75%,
+    100% {
+      max-width: calc(var(--characters) * 1ch);
+    }
+  }
+  
+  @keyframes blink {
+    0%,
+    75%,
+    100% {
+      opacity: 1;
+    }
+    25% {
+      opacity: 0;
+    }
+  }
+
+  .alternating {
+    animation-name: alternating-text;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease;
+  }
+  
+  @keyframes alternating-text {
+    90% {
+      display: none;
+    }
+  }

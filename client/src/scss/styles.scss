@@ -7,7 +7,7 @@
 @use "scss/components/torch.scss" as  *;
 @use "scss/components/glitch.scss" as *;
 @use "scss/components/misc.scss" as  *;
-
+@use "scss/components/typewriter.scss" as *;
 // css 
 @import "css/base.css";
 
@@ -21,9 +21,11 @@
 
 // ui
 @import "./ui/education.scss";
-@import "./ui/landing.scss";
+@import "./ui/fold.scss";
 @import "./ui/skills.scss";
 @import "./ui/work.scss";
 @import "./ui/models.scss";
 @import "./ui/statics.scss";
+@import "./ui/ovelays.scss";
 
+@import "./ui/gallery.scss";

@@ -1,21 +1,17 @@
-.clearfix:before:after {
-  content: '';
-  display: table;
-}
 
-.clearfix:after {
-  clear: both;
-}
 
 .drop-caps {
-  font-family: Century;
-  font-size: calc(var(--typo-font-size));
+  display: inline-block;
+  --line-height: 80px;
+  font-family:Impact, Haettenschweiler, sans-serif;
   line-height: var(--line-height);
 }
 
 .drop-caps::first-letter {
-  font-size: 1.5em;
   height: var(--line-height);
-  width: var(--line-height);
-  line-height: var(--line-height);
+  font-size: calc(var(--line-height));
+}
+
+.fluid-type {
+  font-size: clamp(1rem, 8vw - 2rem, 3rem);
 }
